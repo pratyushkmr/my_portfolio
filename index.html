@@ -82,7 +82,7 @@
             text-transform: uppercase;
         }
 
-        .summary-text { font-style: italic; margin-bottom: 30px; color: #555; }
+        .summary-text { font-style: normal; margin-bottom: 30px; color: #555; }
 
         .job-block { margin-bottom: 30px; }
         .job-header { display: flex; justify-content: space-between; align-items: baseline; }
@@ -99,28 +99,49 @@
             .resume-wrapper { grid-template-columns: 1fr; }
             .sidebar { padding: 30px; }
         }
+		.download-btn-sidebar {
+   display: inline-flex; /* Changed from flex to inline-flex to shrink-wrap the button */
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background-color: transparent;
+    color: var(--accent-blue) !important;
+    text-decoration: none;
+    padding: 6px 12px; /* Reduced padding */
+    border-radius: 20px; /* Rounded pill shape looks smaller and modern */
+    font-size: 12px; /* Smaller font */
+    font-weight: 600;
+    margin: 10px 0 20px 0;
+    transition: all 0.3s ease;
+    border: 1.5px solid var(--accent-blue);
+}
+
+.download-btn-sidebar:hover {
+    background-color: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue) !important;
+}
     </style>
 </head>
 <body>
-<div class="sidebar-section">
-    <a href="PratyushKSrivastavaTL.pdf" download="Pratyush_Srivastava_Resume.pdf" style="text-decoration: none;">
-        <div style="background-color: var(--accent-blue); color: white; padding: 12px; border-radius: 5px; text-align: center; font-weight: bold; cursor: pointer; transition: 0.3s;">
-            <i class="fas fa-file-download" style="margin-right: 10px; color: white;"></i> DOWNLOAD PDF
-        </div>
-    </a>
-</div>
+
 <div class="resume-wrapper">
     <aside class="sidebar">
         <div class="profile-header">
             <h1>Pratyush Kumar<br>Srivastava</h1>
-            <p>MuleSoft Certified Team Lead</p>
+            <p>Integration Team Lead</p>
         </div>
+		
+		<a href="PratyushKSrivastavaTL.pdf" download="Pratyush_Srivastava_Resume.pdf" class="download-btn-sidebar">
+        <i class="fas fa-file-download"></i> DOWNLOAD PDF
+    </a>
 
         <div class="sidebar-section contact-info">
             <h2>Contact</h2>
             <p><i class="fas fa-phone"></i> +91 9651953349</p>
             <p><i class="fas fa-envelope"></i> <a href="mailto:pratyushkmrsrivastava@gmail.com">pratyushkmrsrivastava@gmail.com</a></p>
-            <p><i class="fab fa-linkedin"></i> <a href="#">LinkedIn Profile</a></p>
+
+			<p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/pratyush-srivastava-a52439126/" target="_blank">LinkedIn Profile</a></p>
             <p><i class="fas fa-map-marker-alt"></i> India</p>
         </div>
 
@@ -128,32 +149,48 @@
             <h2>Expertise</h2>
             <div class="skill-group">
                 <h3>Integration</h3>
-                <p>Mule 4 (4.4 to 4.9), Anypoint Platform, RAML, DataWeave, RTF, Kafka</p>
+                <p>Mule 4, Anypoint Platform, RAML, DataWeave, Cloudhub</p>
             </div>
             <div class="skill-group">
                 <h3>Cloud & Backend</h3>
-                <p>AWS, Java 17, Python (Django/Flask), Docker, PostgreSQL, Oracle</p>
+                <p>AWS, Python (Django/Flask/FastAPI), Docker, PostgreSQL, Oracle</p>
             </div>
             <div class="skill-group">
                 <h3>Leadership</h3>
-                <p>Team Management (10+ devs), Agile/Scrum, Stakeholder Management</p>
+                <p>Team Management, Agile/Scrum, Stakeholder Management</p>
             </div>
         </div>
 
         <div class="sidebar-section">
             <h2>Certifications</h2>
-            <div class="cert-item">🏆 MuleSoft Developer Level 2 (2025)</div>
-            <div class="cert-item">🏆 MuleSoft Developer Level 1 (2025)</div>
-            <div class="cert-item">🏆 Salesforce AI Associate (2025)</div>
-            <div class="cert-item">🏆 AWS Cloud Practitioner (2025)</div>
+            <div class="cert-item">🏆 <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?drawId=123&recordId=0034S000000000" target="_blank" style="color:white; text-decoration:none;">MuleSoft Developer Level 2 (2025)</a></div>
+    <div class="cert-item">🏆 <a href="https://trailhead.salesforce.com/en/credentials/certification-detail-print/?drawId=456&recordId=0034S000000000" target="_blank" style="color:white; text-decoration:none;">MuleSoft Developer Level 1 (2025)</a></div>
+    <div class="cert-item">🏆 <a href="#" target="_blank" style="color:white; text-decoration:none;">Salesforce AI Associate (2025)</a></div>
+    <div class="cert-item">🏆 <a href="https://www.credly.com/badges/997676ec-fb6b-49b5-b44c-bcdd2ffbb8e0/linked_in?t=t6ujb7" target="_blank" style="color:white; text-decoration:none;">AWS Cloud Practitioner (2025)</a></div>
+    <div class="cert-item">🎓 <a href="http://ude.my/UC-65c33836-bada-42aa-8b12-592f9f42d1e7" target="_blank" style="color:white; text-decoration:none;">Python & Django Bootcamp (Udemy)</a></div>
         </div>
+		<div class="sidebar-section">
+    <h2>Interests</h2>
+    <div class="skill-group">
+        <p><i class="fas fa-chess" style="width: 20px; color: var(--accent-blue);"></i> Chess</p>
+        <p><i class="fas fa-basketball-ball" style="width: 20px; color: var(--accent-blue);"></i> Basketball</p>
+        <p><i class="fas fa-book" style="width: 20px; color: var(--accent-blue);"></i> Reading</p>
+        <p><i class="fas fa-swimmer" style="width: 20px; color: var(--accent-blue);"></i> Swimming</p>
+        <p><i class="fas fa-pencil-alt" style="width: 20px; color: var(--accent-blue);"></i> Sketching</p>
+        <p><i class="fas fa-dumbbell" style="width: 20px; color: var(--accent-blue);"></i> Fitness Enthusiast</p>
+    </div>
+</div>
     </aside>
 
     <main class="main-content">
         <section>
-            <h2 class="section-title">Professional Summary</h2>
+            <h2 class="section-title">Summary</h2>
             <p class="summary-text">
-                MuleSoft Certified Integration Team Lead with 6+ years of experience specializing in API integration and microservices. Proven track record in architecting digital lending platforms and leading teams of 10+ developers to deliver scalable solutions for fintech and enterprise IT.
+                MuleSoft Certified Integration Team Lead with 6+ years of experience specializing in API integration and microservices,
+delivering scalable solutions for fintech and enterprise IT. Proven track record in architecting digital lending platforms and
+leading cross-functional teamsoptimizing performance, and bridging business needs with technical execution. Passionate
+about continuous learning, mentoring, and building impactful solutions. environments.
+
             </p>
         </section>
 
@@ -166,53 +203,87 @@
                     <span class="job-date">Sep 2024 — Present</span>
                 </div>
                 <span class="job-role">Integration Team Lead</span>
-                <ul>
-                    <li>Led the migration of 380 MuleSoft APIs from Mule 4.4 to 4.9 and Java 8 to Java 17.</li>
-                    <li>Supervised a team of 10 developers, managing code reviews, MUnit coverage, and unit testing documents.</li>
-                    <li>Governed full project lifecycle from business sign-offs to CloudHub and Datadog monitoring.</li>
-                    <li>Migrated protocols from SMB to SFTP, ensuring security compliance and performance.</li>
-                </ul>
+               <li>Led the successful migration of 380 MuleSoft APIs from Mule 4.4 to 4.9 and Java 8 to Java 17.</li>
+        <li>Conducted comprehensive analysis of all APIs within 2 months to develop a phased migration plan, classifying APIs into major and minor change categories.</li>
+        <li>Upgraded POM files, runtime configurations, custom connectors, and deprecated connectors (e.g., SAP RFC, Salesforce Get Session ID), along with updates to AMQ URLs, loggers, error handling, and Solace JCSMP properties.</li>
+        <li>Migrated protocols from SMB to SFTP, ensuring security compliance and performance enhancements.</li>
+        <li>Supervised a team of 10 developers, overseeing development, MUnit coverage, and code reviews; prepared detailed unit testing documents for success and failure scenarios.</li>
+        <li>Governed full project lifecycle: from L2, business, and ops sign-offs, and external stakeholder communication to Dev/TST deployments, CloudHub, and Datadog log monitoring.</li>
+        <li>Handled production activities: CR creation, CAB approvals, policy updates, logger contract changes, and final deployment to production with post-deployment monitoring.</li>
             </div>
 
-            <div class="job-block">
-                <div class="job-header">
-                    <span class="company-name">IDFCFirstBank</span>
-                    <span class="job-date">Nov 2021 — Aug 2024</span>
-                </div>
-                <span class="job-role">Senior API Developer</span>
-                
-                <span class="project-sub">Digital Lending Platform (BNPL)</span>
-                <ul>
-                    <li>Architected identity verification, loan creation, and disbursement APIs, improving onboarding efficiency.</li>
-                    <li>Developed automated CI/CD workflows using Maven, Jenkins, and Git for CloudHub/RTF.</li>
-                    <li>Led infrastructure migration from AMQ to Kafka and MySQL to Oracle databases.</li>
-                </ul>
-            </div>
 
-            <div class="job-block">
-                <div class="job-header">
-                    <span class="company-name">Wipro</span>
-                    <span class="job-date">Aug 2018 — Oct 2021</span>
-                </div>
-                <span class="job-role">Application Developer</span>
-                <ul>
-                    <li>Designed desktop applications using PyQt5 and deployed ML models for outlier detection.</li>
-                    <li>Optimized REST APIs using Django REST and Flask for business data processing.</li>
-                    <li>Leveraged AWS, Docker, and PostgreSQL to build production-ready data analytics solutions.</li>
-                </ul>
-            </div>
-        </section>
+<div class="job-block">
+    <div class="job-header">
+        <span class="company-name">IDFCFirstBank</span>
+        <span class="job-date">Nov 2021 — Aug 2024</span>
+    </div>
+    <span class="job-role">Senior API Developer</span>
+    
+    <span class="project-sub">Project 1: Digital Lending Platform (BNPL/Pay Later Service)</span>
+    <ul>
+        <li>Architected the loan onboarding process by developing architectural APIs for identity verification, loan creation, and disbursement, improving onboarding efficiency.</li>
+        <li>Designed RAML specifications using Anypoint Platform and built MUnit test cases, enabling automated CI/CD workflows through Maven and Jenkins.</li>
+        <li>Achieved MuleSoft Certified Developer – Level 1 (MCD) certification, validating core integration expertise.</li>
+        <li>Implemented advanced DataWeave transformations and centralized exception handling strategies.</li>
+        <li>Developed custom Python scripts to automate repetitive tasks, improving operational efficiency.</li>
+    </ul>
 
-        <section>
-            <h2 class="section-title">Education</h2>
-            <div class="job-header">
-                <span class="company-name">B.Tech in Computer Science (Honors)</span>
-                <span class="job-date">2014 — 2018</span>
-            </div>
-            <p style="margin: 2px 0;">Dr. APJ Abdul Kalam University | 75%</p>
-        </section>
-    </main>
+    <span class="project-sub">Project 2: Migration and Integration Initiatives</span>
+    <ul>
+        <li>Led the migration of infrastructure components, including messaging systems from AMQ to Kafka and databases from MySQL to Oracle.</li>
+        <li>Gained hands-on experience with Anypoint Platform components (API Manager, Design Center, Exchange) for platform scalability.</li>
+        <li>Strengthened API security by implementing robust protocols, including OAuth 2.0, aligning with enterprise compliance.</li>
+    </ul>
 </div>
+
+            <div class="job-block">
+    <div class="job-header">
+        <span class="company-name">Wipro</span>
+        <span class="job-date">Aug 2018 — Oct 2021</span>
+    </div>
+    <span class="job-role">Application Developer</span>
+    <p style="font-size: 13px; color: #555; margin: 5px 0;">
+        <strong>Technologies:</strong> Python, MuleSoft, Django REST, Flask, PyQt5, AWS, PostgreSQL, Docker<br>
+        <strong>Tools:</strong> Postman, WinSCP, PuTTY, Anaconda, Visual Studio, Bitbucket, Git Bash, Jenkins
+    </p>
+    <ul>
+        <li>Designed and maintained desktop applications using the PyQt5 framework, enhancing UI/UX and system functionality through continuous debugging and performance tuning.</li>
+        <li>Developed and deployed machine learning models for outlier detection, automating manual anomaly detection processes and improving data accuracy and efficiency.</li>
+        <li>Leveraged AWS, PostgreSQL, and Docker to build robust, scalable, and production-ready solutions for data processing and analytics.</li>
+        <li>Designed and optimized REST APIs for business data storage, processing, and update operations using Python frameworks (Django REST, Flask) and libraries like Pandas, NumPy, JSON, and schema validation tools.</li>
+        <li>Improved code quality, maintainability, and security through advanced coding practices, including the use of decorators, structured error handling, and data encryption techniques.</li>
+        <li>Ensured seamless development, testing, and deployment workflows using tools like Postman, Jenkins, Git, Bitbucket, and Anaconda.</li>
+    </ul>
+<section>
+            <h2 class="section-title">Education</h2>
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="company-name">B.Tech in Computer Science</span>
+                    <span class="job-date">2014 — 2018</span>
+                </div>
+                <p style="margin: 2px 0;">Dr. APJ Abdul Kalam University | 75% (with Honors)</p>
+            </div>
+
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="company-name">Intermediate (ISC Board)</span>
+                    <span class="job-date">2013 — 2014</span>
+                </div>
+                <p style="margin: 2px 0;">St. Francis College, Lucknow | 86%</p>
+            </div>
+
+            <div class="job-block">
+                <div class="job-header">
+                    <span class="company-name">High School (ICSE Board)</span>
+                    <span class="job-date">2011 — 2012</span>
+                </div>
+                <p style="margin: 2px 0;">St. Francis College, Lucknow | 85%</p>
+            </div>
+        </section>
+
+
+</body>
 <div class="sidebar-section">
     <a href="PratyushKSrivastavaTL.pdf" download="Pratyush_Srivastava_Resume.pdf" style="text-decoration: none;">
         <div style="background-color: var(--accent-blue); color: white; padding: 12px; border-radius: 5px; text-align: center; font-weight: bold; cursor: pointer; transition: 0.3s;">
@@ -220,7 +291,5 @@
         </div>
     </a>
 </div>
-
-</body>
 
 </html>
